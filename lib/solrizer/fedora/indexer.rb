@@ -164,7 +164,7 @@ class Indexer
       logger.debug "  added solr fields from #{klazz.to_s}"
     end
     
-    ::Solrizer::Extractor.insert_solr_field_value(solr_doc, :id_t, "#{obj.pid}" )
+    ::Solrizer::Extractor.insert_solr_field_value(solr_doc, :id_tesim, "#{obj.pid}" )
     ::Solrizer::Extractor.insert_solr_field_value(solr_doc, :id, "#{obj.pid}" ) unless solr_doc[:id]
     
     return solr_doc
